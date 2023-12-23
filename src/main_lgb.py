@@ -98,6 +98,6 @@ for uid in tqdm(user_ids):
 submit_df['product_id'] = preds
 
 # 分数 0.206
-submit_df.to_csv('baseline.csv', index=False)
+submit_df.to_csv('../data/baseline_lgb.csv', index=False)
 
 
