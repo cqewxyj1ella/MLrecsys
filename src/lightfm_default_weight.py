@@ -100,4 +100,4 @@ for uid in user_ids:
     preds.append(top_item_id)
 
 submit_df['product_id'] = preds
-submit_df.to_csv('lightfm_default_weight.csv', index=False)
+submit_df.to_csv('../data/submit_lightfm_default_weight.csv', index=False)

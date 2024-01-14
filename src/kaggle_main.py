@@ -63,7 +63,7 @@ def popularity(train_df, test_df, full_df, interactions_full_df):
         preds.append(popularity_model.predict(user_id=uid))
     submit_df = pd.read_csv('../data/submit_example.csv')
     submit_df['product_id'] = preds
-    submit_df.to_csv('popularity_sampled.csv', index=False)
+    submit_df.to_csv('../data/submit_popularity_sampled.csv', index=False)
     
 def svd(test_df, full_df, interactions_full_df):
     # creating a sparse pivot table with users in rows and items in columns
@@ -95,7 +95,7 @@ def svd(test_df, full_df, interactions_full_df):
         preds.append(cf_recommender_model.predict(user_id=uid))
     submit_df = pd.read_csv('../data/submit_example.csv')
     submit_df['product_id'] = preds
-    submit_df.to_csv('SVD.csv', index=False)
+    submit_df.to_csv('../data/submit_SVD.csv', index=False)
 
 if __name__ == '__main__':
     import argparse
